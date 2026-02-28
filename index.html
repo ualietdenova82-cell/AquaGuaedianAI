@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AquaGuard AI - Басқару Панелі</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body { background-color: #0f172a; color: white; font-family: 'Inter', sans-serif; }
+        .glass { background: rgba(30, 41, 59, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.1); }
+        .status-online { color: #10b981; text-shadow: 0 0 10px #10b981; }
+        /* Суреттерді стильдеу үшін */
+        .img-fit { object-fit: cover; object-position: center; }
+    </style>
+</head>
+<body class="p-6">
+
+    <header class="flex justify-between items-center mb-8 glass p-4 rounded-2xl">
+        <div>
+            <h1 class="text-2xl font-bold tracking-tight text-blue-400">AQUAGUARD <span class="text-white">AI SYSTEM</span></h1>
+            <p class="text-xs text-slate-400">Спутниктік байланыс: <span class="status-online font-bold italic underline">БЕЛСЕНДІ</span></p>
+        </div>
+        <div class="flex gap-4">
+            <button class="bg-red-600 hover:bg-red-700 px-4 py-2 rounded-lg font-bold transition">SOS: ЖҰМЫСТЫ ТОҚТАТУ</button>
+            <div class="flex items-center gap-2 bg-slate-800 px-4 py-2 rounded-lg">
+                <i data-lucide="user" class="w-5 h-5"></i>
+                <span>Оператор: Office_01</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <div class="md:col-span-2 glass rounded-2xl p-4 overflow-hidden relative">
+            <div class="flex justify-between mb-4">
+                <h2 class="flex items-center gap-2 font-semibold"><i data-lucide="video"></i> Тікелей эфир (Автономды көлік)</h2>
+                <span class="bg-red-500 px-2 py-1 rounded text-xs animate-pulse">LIVE</span>
+            </div>
+            <div class="aspect-video bg-slate-900 rounded-lg overflow-hidden border border-slate-700 relative">
+                <img src="image_0.png#p-314,35,492,302" alt="Автономды көліктен тікелей эфир" class="w-full h-full img-fit">
+                <div class="absolute bottom-6 left-6 p-4 bg-black/50 rounded-lg text-xs">
+                    Координаттар: 43.2220° N, 76.8512° E <br> Жылдамдық: 12 км/сағ
+                </div>
+            </div>
+        </div>
+
+        <div class="glass rounded-2xl p-6">
+            <h2 class="flex items-center gap-2 font-semibold mb-6"><i data-lucide="droplet" class="text-blue-400"></i> Су сапасы (pH)</h2>
+            <div class="flex flex-col items-center">
+                <div class="w-40 h-40 bg-slate-900 rounded-full flex items-center justify-center border border-slate-700 mb-4 overflow-hidden">
+                    <img src="image_0.png#p-215,679,258,822" alt="pH сенсоры" class="img-fit">
+                </div>
+                <div class="text-6xl font-bold text-blue-500 mb-2">7.2</div>
+                <p class="text-slate-400 mb-4 font-medium">Көрсеткіш: Қалыпты</p>
+                <div class="w-full bg-slate-700 h-2 rounded-full overflow-hidden">
+                    <div class="bg-blue-500 h-full w-[72%]"></div>
+                </div>
+            </div>
+            <div class="mt-8 space-y-4 text-sm text-slate-300">
+                <div class="flex justify-between border-b border-slate-700 pb-2">
+                    <span>Температура:</span> <span class="text-white font-bold">18°C</span>
+                </div>
+                <div class="flex justify-between border-b border-slate-700 pb-2">
+                    <span>Тұздылық:</span> <span class="text-white font-bold">0.5%</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="glass rounded-2xl p-6">
+            <h2 class="font-semibold mb-4 border-b border-slate-700 pb-2">Роботтар күйі</h2>
+            <div class="space-y-6">
+                <div class="flex items-center justify-between gap-4">
+                    <div class="w-20 h-20 bg-slate-800 rounded-lg overflow-hidden border border-slate-700 flex items-center justify-center">
+                        <img src="image_0.png#p-163,382,233,524" alt="Құтқарушы робот" class="img-fit h-full">
+                    </div>
+                    <div class="flex-1">
+                        <div class="flex items-center justify-between mb-1">
+                            <div class="flex items-center gap-2"><i data-lucide="life-buoy" class="w-4 h-4 text-orange-500"></i> <p class="font-bold text-sm">Құтқарушы робот</p></div>
+                            <span class="text-xs font-mono text-green-400">БАТ: 98%</span>
+                        </div>
+                        <p class="text-xs text-slate-400">Адам табылды. Күту режимінде.</p>
+                    </div>
+                </div>
+                <div class="flex items-center justify-between gap-4">
+                    <div class="w-20 h-20 bg-slate-800 rounded-lg overflow-hidden border border-slate-700 flex items-center justify-center">
+                        <img src="image_0.png#p-163,688,272,971" alt="Қоқыс жинаушы" class="img-fit w-full">
+                    </div>
+                    <div class="flex-1">
+                        <div class="flex items-center justify-between mb-1">
+                            <div class="flex items-center gap-2"><i data-lucide="trash-2" class="w-4 h-4 text-green-500"></i> <p class="font-bold text-sm">Қоқыс жинаушы</p></div>
+                            <span class="text-xs font-mono text-green-400">БАТ: 45%</span>
+                        </div>
+                        <p class="text-xs text-slate-400">Жұмыс үстінде. Қоқыс жиналуда.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="md:col-span-2 glass rounded-2xl p-6 relative">
+            <div class="absolute top-6 right-6 w-32 h-20 bg-slate-800 rounded-lg border border-slate-700 overflow-hidden">
+                <img src="image_0.png#p-260,742,467,980" alt="Спутниктік карта көрінісі" class="w-full h-full img-fit">
+            </div>
+            <h2 class="flex items-center gap-2 font-semibold mb-4"><i data-lucide="cpu" class="text-purple-400"></i> AI Орталық Аналитика</h2>
+            <div class="space-y-3 pr-40"> <div class="bg-blue-500/10 border-l-4 border-blue-500 p-3 text-sm">
+                    <span class="text-blue-400 font-bold"></span> Спутниктік карта жаңартылды. Жаңа қоқыс шоғыры анықталды.
+                </div>
+                <div class="bg-orange-500/10 border-l-4 border-orange-500 p-3 text-sm">
+                    <span class="text-orange-400 font-bold"></span> Спутник арқылы адам табылды. Көмекке жіберілді.
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        // Иконкаларды іске қосу
+        lucide.createIcons();
+    </script>
+</body>
+</html>
